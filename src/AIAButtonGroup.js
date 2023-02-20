@@ -60,6 +60,7 @@ export default function AIAButtonGroup(){
             </ToggleButton>
             ))}
         </ButtonGroup>
+        <br /><br />
         </div>     
         </>
     );

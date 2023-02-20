@@ -12,7 +12,7 @@ function App() {
     </div>
     
     <AIAButtonGroup />
-    <br/ >
+    
     <p className="App-text"> This data is from the <a href="https://sdo.gsfc.nasa.gov/"> <code> Solar Dynamics Observatory </code> </a> </p>
     </div>
   )
