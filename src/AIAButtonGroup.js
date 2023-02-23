@@ -29,10 +29,14 @@ export default function AIAButtonGroup(){
         { name: '211 Å',  value: '5', wavelength:'0211'},
         { name: '304 Å',  value: '6', wavelength:'0304'},
         { name: '335 Å',  value: '7', wavelength:'0335'},
+    ];
+    const toggles_2 = [
         { name: '1600 Å', value: '8', wavelength:'1600'},
         { name: '1700 Å', value: '9', wavelength:'1700'},
-    ];
-    console.log("Logged during button creation")
+        { name: 'HMIIF' ,  value: '10', wavelength:'HMIIF'},
+        { name: 'HMIBC' ,  value: '11', wavelength:'HMIBC'}
+    ]
+    
 
     return (
         <>
@@ -60,6 +64,26 @@ export default function AIAButtonGroup(){
             </ToggleButton>
             ))}
         </ButtonGroup>
+        <br/ ><br/ >
+        <ButtonGroup>
+            {toggles_2.map((radio, idx) => (
+            <ToggleButton
+                key={idx+7}
+                id={`radio-${idx+7}`}
+                type="radio"
+                variant='outline-primary'
+                name="radio-second-row"
+                value={radio.value}
+                checked={radioValue === radio.value}
+                onChange={(e) => setRadioValue(e.currentTarget.value)}
+                onClick={(e) => handleClick(radio.value, radio.wavelength, e)}
+                // onClick={handleClick}
+            >
+                {radio.name}
+            </ToggleButton>
+            ))}
+        </ButtonGroup>
+
         <br /><br />
         </div>     
         </>
